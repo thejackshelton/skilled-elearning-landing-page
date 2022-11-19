@@ -54,20 +54,11 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: "Plus Jakarta Sans", sans-serif;
-  /* adds 16px of padding to both sides */
-  margin-inline: 1rem;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -98,6 +89,7 @@ h3 {
 
 a {
   font-size: 1.125rem;
+  font-weight: 700;
   line-height: 1.75rem;
   color: var(--darkishPink);
   text-decoration: none;
@@ -105,13 +97,16 @@ a {
 
 p {
   font-size: 1rem;
+  font-weight: 500;
   line-height: 1.625;
   color: var(--gray);
 }
 
 button {
   border-radius: 1.75rem;
-  padding: 0.5rem 1rem;
+  padding: 0.625rem 1.5rem;
+  line-height: 1.75rem;
+  font-weight: 700;
 }
 
 header,
@@ -123,7 +118,12 @@ footer {
 
 header {
   padding-top: 1rem;
+  margin-inline: 1rem;
 }
+
+/* main {
+  margin-inline: 1rem;
+} */
 
 .logo--small {
   max-width: 5.5625rem;
@@ -131,12 +131,55 @@ header {
   object-fit: contain;
 }
 
+.button--borderless {
+  border: none;
+}
+
+.header__button--dark {
+  background-color: var(--darkishBlue);
+  color: var(--white);
+}
+
+.title--spacing {
+  margin: 2.375rem 0 1.625rem 0;
+}
+
+.intro__button {
+  background: var(--orangePinkGradient);
+  color: var(--white);
+  line-height: 1.75rem;
+  padding: 0.875rem 2.375rem;
+}
+
+.intro__button--spacing {
+  margin: 1.5rem 0 2.34375rem 0;
+}
+
 .graphic {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0rem 0.5rem;
-  object-fit: contain;
+}
+
+.graphic__image--small {
+  max-width: 327px;
+}
+
+.banner {
+  background: var(--orangePinkGradient);
+  padding: 0rem;
+  border-radius: 0.625rem;
+  margin: 4.125rem 0rem 1rem 0rem;
+}
+
+.banner__headline {
+  padding: 1.5rem 1.8125rem 2rem 1.75rem;
+  color: var(--white);
+}
+
+footer {
+  width: calc(100%);
+  background-color: var(--darkishBlue);
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
